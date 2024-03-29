@@ -59,9 +59,11 @@ body {
 	}
 
 	&__logo {
+		position: relative;
 		font-size: 2.8rem;
 		color: c.$text-color-two;
 		transition: color 0.3s;
+		z-index: 5;
 	}
 
 	&__menu {
@@ -69,49 +71,25 @@ body {
 		align-items: center;
 		justify-content: space-around;
 		flex-direction: column;
+		padding-top: 60px;
 		position: absolute;
-		top: 60px;
-		left: 50%;
-		width: 80%;
-		height: 45svh;
-		scale: 0;
-		backdrop-filter: blur(16px) saturate(180%);
-		-webkit-backdrop-filter: blur(16px) saturate(180%);
-		background-color: rgba(17, 25, 40, 0.75);
-		border-radius: 12px;
-		border: 1px solid rgba(255, 255, 255, 0.125);
-		translate: -50% 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100dvh;
+		background-color: c.$bg-color-two;
+		translate: -150% 0;
+		transition: translate 0.3s;
 
 		&--active {
-			scale: 1;
-
-			.nav__menu-link {
-				opacity: 1;
-			}
+			translate: 0;
 		}
 	}
 
 	&__menu-link {
 		font-size: 2rem;
 		color: c.$text-color-two;
-		opacity: 0;
 		transition: color 0.3s;
-
-		&:nth-child(1) {
-			transition: opacity 0.1s;
-		}
-
-		&:nth-child(2) {
-			transition: opacity 0.3s;
-		}
-
-		&:nth-child(3) {
-			transition: opacity 0.6s;
-		}
-
-		&:nth-child(4) {
-			transition: opacity 0.9s;
-		}
 	}
 
 	&__bars {
@@ -244,19 +222,19 @@ body {
 		}
 
 		&--one {
-			background-image: url('../../dist/img/section-one-1.webp');
+			background-image: url('../dist/img/section-one-1.webp');
 		}
 
 		&--two {
-			background-image: url('../../dist/img/section-one-2.webp');
+			background-image: url('../dist/img/section-one-2.webp');
 		}
 
 		&--three {
-			background-image: url('../../dist/img/section-one-3.webp');
+			background-image: url('../dist/img/section-one-3.webp');
 		}
 
 		&--four {
-			background-image: url('../../dist/img/section-one-4.webp');
+			background-image: url('../dist/img/section-one-4.webp');
 		}
 	}
 
@@ -547,6 +525,8 @@ body {
 	}
 
 	&__item {
+		color: c.$text-color-two;
+
 		&:not(:first-child) {
 			margin-bottom: 0.5em;
 		}
@@ -579,6 +559,7 @@ body {
 		&__menu {
 			justify-content: flex-end;
 			flex-direction: row;
+			padding-top: 0;
 			position: static;
 			height: 100%;
 			backdrop-filter: none;

@@ -43,6 +43,18 @@ const handleNav = () => {
 	} else {
 		menuLink.forEach(link => (link.style.color = '#fffdf7'))
 	}
+
+	if (window.matchMedia("(max-width: 576px)").matches && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		window.addEventListener('scroll', function() {
+			if (window.scrollY > 50) {
+				menu.style.backgroundColor = '#fffdf7';
+				menuLink.forEach(link => (link.style.color = '#323031'));
+			} else {
+				menu.style.backgroundColor = '#242323';
+				menuLink.forEach(link => (link.style.color = '#fffdf7'));
+			}
+		});
+	}
 }
 
 const observerOptions = {
