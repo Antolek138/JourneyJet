@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JourneyJet - Travel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+
+<body class="unlocked">
+
+    <nav class="nav">
+    <div class="nav__container wrapper">
+        <a href="#" class="nav__logo">Journey<span class="fwb">Jet</span></a>
+        <div class="nav__menu">
+            <a href="#" class="nav__menu-link">Wycieczki</a>
+            <a href="#" class="nav__menu-link">Booking</a>
+            <a href="#" class="nav__menu-link">Blog</a>
+            <a href="#" class="nav__menu-link">Kontakt</a>
+        </div>
+        <button class="nav__bars" aria-label="otwieranie / zamykanie menu">
+            <div class="nav__bars-line"></div>
+            <div class="nav__bars-line"></div>
+            <div class="nav__bars-line"></div>
+        </button>
+    </div>
+</nav>
+
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__title">Dokąd chcesz się udać?</h1>
+            <h2 class="header__text">Zaplanuj swoją przygodę z naszym biurem podróży!</h2>
+            <div class="header__options">
+                <select class="header__card" name="city">
+                    <i class="bi bi-search"></i>
+                    <option value="city" disabled selected>Cel podróży, miasto</option>
+                    <option value="france">Francja</option>
+                    <option value="uk">Wielka Brytania</option>
+                    <option value="madera">Madera</option>
+                    <option value="italy">Włochy</option>
+                </select>
+                <select class="header__card" name="month">
+                    <option value="0" disabled selected>Miesiąc</option>
+                    <option value="1">Styczeń</option>
+                    <option value="2">Luty</option>
+                    <option value="3">Marzec</option>
+                    <option value="4">Kwiecień</option>
+                    <option value="5">Maj</option>
+                    <option value="6">Czerwiec</option>
+                    <option value="7">Lipiec</option>
+                    <option value="8">Sierpień</option>
+                    <option value="9">Wrzesień</option>
+                    <option value="10">Październik</option>
+                    <option value="11">Listopad</option>
+                    <option value="12">Grudzień</option>
+                </select>
+                <select class="header__card" name="sort">
+                    <option value="date">Sortuj według daty</option>
+                    <option value="hightPrice">Od najwyższej ceny</option>
+                    <option value="lowPrice">Od najniższej ceny</option>
+                    <option value="name">Sortuj według nazwy</option>
+                    <option value="popular">Sortuj według popularności</option>
+                </select>
+                <button class="header__send header__card">Szukaj</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="popular ptb">
+            <div class="section__header">
+                <h2 class="section__header-title">Popularne miejsca</h2>
+                <p class="section__header-text">Najlepsze miejsca turystyczne na świecie</p>
+            </div>
+            <div class="popular__container">
+                <div class="popular__card popular__card--one">
+                    <a href="#" class="popular__card-link">Tokyo</a>
+                </div>
+                <div class="popular__card popular__card--two">
+                    <a href="#" class="popular__card-link">Seoul</a>
+                </div>
+                <div class="popular__card popular__card--three">
+                    <a href="#" class="popular__card-link">Paris</a>
+                </div>
+                <div class="popular__card popular__card--four">
+                    <a href="#" class="popular__card-link">London</a>
+                </div>
+            </div>
+        </section>
+        <section class="trips ptb">
+            <div class="section__header">
+                <h2 class="section__header-title">Wycieczki w najlepszej cenie</h2>
+                <p class="section__header-text">Najlepsze oferty wycieczek</p>
+            </div>
+            <div class="trips__container">
+                <div class="trips__card">
+                    <img class="trips__photo" src="../dist/img/section-two-1.webp" alt="">
+                    <div class="trips__text-box">
+                        <h2 class="trips__card-title">Francuska jesień</h2>
+                        <div class="trips__card-bottom">
+                            <div class="trips__card-review">
+                                <p class="trips__card-day">4 dni</p>
+                                <div class="trips__card-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="trips__price">3,500 PLN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips__card">
+                    <img class="trips__photo" src="../dist/img/section-two-2.webp" alt="">
+                    <div class="trips__text-box">
+                        <h2 class="trips__card-title">Wielka Szwajcaria</h2>
+                        <div class="trips__card-bottom">
+                            <div class="trips__card-review">
+                                <p class="trips__card-day">8 dni</p>
+                                <div class="trips__card-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="trips__price">4,000 PLN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trips__card">
+                    <img class="trips__photo" src="../dist/img/section-two-3.webp" alt="">
+                    <div class="trips__text-box">
+                        <h2 class="trips__card-title">Poznaj Japonię</h2>
+                        <div class="trips__card-bottom">
+                            <div class="trips__card-review">
+                                <p class="trips__card-day">10 dni</p>
+                                <div class="trips__card-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="trips__price">3,200 PLN</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="info ptb">
+            <div class="section__header">
+                <h2 class="section__header-title">Dlaczego warto nas wybrać</h2>
+                <p class="section__header-text">Oto powody, dla których warto zaplanować podróż z nami</p>
+            </div>
+            <div class="info__container">
+                <div class="info__card">
+                    <span class="info__card-number" data-val="650">000</span>
+                    <h2 class="info__card-title">Zadowolonych klientów</h2>
+                </div>
+                <div class="info__card">
+                    <span class="info__card-number" data-val="224">000</span>
+                    <h2 class="info__card-title">Zaplanowanych wycieczek</h2>
+                </div>
+                <div class="info__card">
+                    <span class="info__card-number" data-val="720">000</span>
+                    <h2 class="info__card-title">Celi podróży</h2>
+                </div>
+            </div>
+        </section>
+        <section class="newsletter ptb">
+            <div class="newsletter__container">
+                <div class="newsletter__card newsletter__card--one">
+                    <h2 class="newsletter__card-title">Odkryj specjalne oferty!</h2>
+                    <p class="newsletter__card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
+                        expedita.</p>
+                    <a href="#" class="newsletter__card-link">Zobacz wycieczki</a>
+                </div>
+                <div class="newsletter__card newsletter__card--two">
+                    <h2 class="newsletter__card-title">Nie przegap żadnej okazji</h2>
+                    <p class="newsletter__card-text newsletter__card-text--two">Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                    <div class="newsletter__bottom">
+                        <input type="text">
+                        <button class="newsletter__send">Zapisz się</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="blog ptb">
+            <div class="section__header">
+                <h2 class="section__header-title">Artykuły i porady</h2>
+                <p class="section__header-text">Zapoznaj się z najlepszymi poradami</p>
+            </div>
+            <div class="blog__container">
+                <div class="blog__card">
+                    <div class="blog__card-top">
+                        <div class="blog__photo blog__photo--one"></div>
+                    </div>
+                    <div class="blog__card-bottom">
+                        <p class="blog__card-date">5 GRUDNIA, 2024</p>
+                        <h2 class="blog__card-title">Podróżnicze Opowieści z Kawą w Tle</h2>
+                        <p class="blog__card-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <a href="#" class="blog__card-link">Czytaj Więcej</a>
+                    </div>
+                </div>
+                <div class="blog__card">
+                    <div class="blog__card-top">
+                        <div class="blog__photo blog__photo--two"></div>
+                    </div>
+                    <div class="blog__card-bottom">
+                        <p class="blog__card-date">12 KWIETNIA, 2024</p>
+                        <h2 class="blog__card-title">Opowieści z Nieznanych Szlaków</h2>
+                        <p class="blog__card-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <a href="#" class="blog__card-link">Czytaj Więcej</a>
+                    </div>
+                </div>
+                <div class="blog__card">
+                    <div class="blog__card-top">
+                        <div class="blog__photo blog__photo--three"></div>
+                    </div>
+                    <div class="blog__card-bottom">
+                        <p class="blog__card-date">5 MAJA, 2024</p>
+                        <h2 class="blog__card-title">Inspirujące Historie z Podróży</h2>
+                        <p class="blog__card-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <a href="#" class="blog__card-link">Czytaj Więcej</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer ptb bg-two">
+    <div class="footer__container wrapper">
+        <a href="#" class="footer__logo">JourneyJet</a>
+        <ul class="footer__list">
+            <li class="footer__item footer__item--title">Kontakt</li>
+            <li class="footer__item">T: +48 123 123 123</li>
+            <li class="footer__item">E: kontakt@mail.pl</li>
+        </ul>
+        <ul class="footer__list">
+            <li class="footer__item footer__item--title">Przydatne linki</li>
+            <li class="footer__item">Artykuły & Porady</li>
+            <li class="footer__item">Praca z nami</li>
+            <li class="footer__item">Zostań Partnerem</li>
+        </ul>
+        <ul class="footer__list">
+            <li class="footer__item footer__item--title">Płać bezpiecznie z nami</li>
+            <li class="footer__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+        </ul>
+    </div>
+    <p class="footer__date">&copy; <span class="footer__year"></span> JourneyJet - Travel</p>
+</footer>
+
+    <script src="./dist/js/script.min.js"></script>
+</body>
+
+</html>

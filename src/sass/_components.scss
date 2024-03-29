@@ -1,0 +1,46 @@
+@use 'colors' as c;
+
+a {
+	text-decoration: none;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.fwb {
+	font-weight: bold;
+}
+
+.ptb {
+	padding: 4em 0;
+}
+
+.bg-two {
+	color: c.$text-color-two;
+	background-color: c.$bg-color-two;
+}
+
+.section__header {
+	padding: 0 1em 2em 1em;
+	text-align: center;
+
+	&-title {
+		margin-bottom: 0.5em;
+		font-size: 2.8rem;
+	}
+
+	&-text {
+		font-size: 1.8rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.section__header {
+		&-title {
+			font-size: 3.2rem;
+		}
+	}
+}
