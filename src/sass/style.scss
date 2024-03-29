@@ -186,15 +186,12 @@ body {
 		font-size: 1.8rem;
 		border: none;
 		border-radius: 5px;
+		color: c.$text-color;
 	}
 
 	&__send {
 		color: c.$text-color-two;
 		background-color: c.$primary;
-	}
-
-	select {
-		color: c.$text-color;
 	}
 }
 
@@ -529,7 +526,9 @@ body {
 	}
 
 	&__item {
-		color: c.$text-color-two;
+		a {
+			color: c.$text-color-two;
+		}
 
 		&:not(:first-child) {
 			margin-bottom: 0.5em;
