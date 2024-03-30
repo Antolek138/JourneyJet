@@ -134,6 +134,7 @@ body {
 .header {
 	position: relative;
 	min-height: 95svh;
+	max-height: 100svh;
 	background-size: cover;
 	background-image: url('../../dist/img/header-small.webp');
 
