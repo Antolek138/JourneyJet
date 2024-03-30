@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JourneyJet - Travel</title>
+    <!-- Preload obrazu LCP -->
+    <link rel="preload" href="../dist/img/header-small.webp" as="image">
+    <link rel="preload" href="../dist/img/header-big.webp" as="image">
+    <!-- Pozostałe zasoby -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
+
 
 <body class="unlocked">
 
@@ -21,7 +26,7 @@
             <h1 class="header__title">Dokąd chcesz się udać?</h1>
             <h2 class="header__text">Zaplanuj swoją przygodę z naszym biurem podróży!</h2>
             <div class="header__options">
-                <select class="header__card" name="city">
+                <select class="header__card" name="city" aria-label="wybierz miasto jakie cię interesuje">
                     <i class="bi bi-search"></i>
                     <option value="city" disabled selected>Cel podróży, miasto</option>
                     <option value="france">Francja</option>
@@ -29,7 +34,7 @@
                     <option value="madera">Madera</option>
                     <option value="italy">Włochy</option>
                 </select>
-                <select class="header__card" name="month">
+                <select class="header__card" name="month" aria-label="wybierz miesiąc który cię interesuje">
                     <option value="0" disabled selected>Miesiąc</option>
                     <option value="1">Styczeń</option>
                     <option value="2">Luty</option>
@@ -44,7 +49,7 @@
                     <option value="11">Listopad</option>
                     <option value="12">Grudzień</option>
                 </select>
-                <select class="header__card" name="sort">
+                <select class="header__card" name="sort" aria-label="sortuj wyszukania">
                     <option value="date">Sortuj według daty</option>
                     <option value="hightPrice">Od najwyższej ceny</option>
                     <option value="lowPrice">Od najniższej ceny</option>
@@ -85,7 +90,7 @@
             </div>
             <div class="trips__container">
                 <div class="trips__card">
-                    <img class="trips__photo" src="./dist/img/section-two-1.webp" alt="">
+                    <img loading="lazy" class="trips__photo" src="./dist/img/section-two-1.webp" alt="">
                     <div class="trips__text-box">
                         <h2 class="trips__card-title">Francuska jesień</h2>
                         <div class="trips__card-bottom">
@@ -104,7 +109,7 @@
                     </div>
                 </div>
                 <div class="trips__card">
-                    <img class="trips__photo" src="./dist/img/section-two-2.webp" alt="">
+                    <img loading="lazy" class="trips__photo" src="./dist/img/section-two-2.webp" alt="">
                     <div class="trips__text-box">
                         <h2 class="trips__card-title">Wielka Szwajcaria</h2>
                         <div class="trips__card-bottom">
@@ -123,7 +128,7 @@
                     </div>
                 </div>
                 <div class="trips__card">
-                    <img class="trips__photo" src="./dist/img/section-two-3.webp" alt="">
+                    <img loading="lazy" class="trips__photo" src="./dist/img/section-two-3.webp" alt="">
                     <div class="trips__text-box">
                         <h2 class="trips__card-title">Poznaj Japonię</h2>
                         <div class="trips__card-bottom">
@@ -176,7 +181,7 @@
                     <p class="newsletter__card-text newsletter__card-text--two">Lorem ipsum dolor sit amet consectetur.
                     </p>
                     <div class="newsletter__bottom">
-                        <input type="text">
+                        <input type="text" aria-label="zapisz się do newslettera">
                         <button class="newsletter__send">Zapisz się</button>
                     </div>
                 </div>
