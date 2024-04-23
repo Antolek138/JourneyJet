@@ -527,17 +527,20 @@ body {
 	}
 
 	&__item {
+		font-size: 1.8rem;
+
 		a {
 			color: c.$text-color-two;
 		}
 
 		&:not(:first-child) {
-			margin-bottom: 0.5em;
+			margin-top: 1em;
 		}
 
 		&--title {
 			margin-bottom: 1.5em;
-			font-size: 2rem;
+			font-size: 2.4rem;
+			color: c.$secondary;
 		}
 	}
 
@@ -648,6 +651,33 @@ body {
 			flex-direction: row;
 			flex-wrap: wrap;
 			gap: 2.5em;
+		}
+	}
+
+	.footer {
+		&__container {
+			gap: 6em;
+		}
+
+		&__logo {
+			font-size: 4.2rem;
+		}
+
+		&__item {
+			font-size: 2rem;
+
+			&:not(:first-child) {
+				margin-top: 1.5em;
+			}
+
+			&--title {
+				width: 280px;
+				font-size: 2.6rem;
+			}
+		}
+
+		&__date {
+			font-size: 2.8rem;
 		}
 	}
 }
