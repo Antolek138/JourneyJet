@@ -363,7 +363,7 @@ body {
 		&--one {
 			position: relative;
 			background-size: cover;
-			background-image: url('../../dist/img/newsletter.webp');
+			background-image: url('/dist/img/newsletter.webp');
 			color: c.$text-color-two;
 			overflow: hidden;
 
