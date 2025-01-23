@@ -356,83 +356,101 @@ body {
 
 	&__card {
 		padding: 1em;
+		position: relative;
 		width: clamp(300px, 90%, 350px);
 		height: 330px;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		background-size: cover;
+		color: c.$text-color-two;
 		border-radius: 10px;
 
-		&--one {
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			backdrop-filter: blur(2.5px);
+			-webkit-backdrop-filter: blur(2.5px);
+			border-radius: 10px;
+		}
+
+		h2,
+		p,
+		input {
 			position: relative;
-			background-size: cover;
+			z-index: 5;
+		}
+
+		&--one {
 			background-image: url('/dist/img/newsletter.webp');
-			color: c.$text-color-two;
-			overflow: hidden;
 
 			&::after {
-				content: '';
-				position: absolute;
-				inset: 0;
-				width: 100%;
-				height: 100%;
-				background-color: c.$hero-color;
-			}
-
-			h2,
-			p,
-			a {
-				position: relative;
-				z-index: 5;
+				background-color: rgba(0, 0, 0, 0.5);
 			}
 		}
 
 		&--two {
-			background-color: #e4e4e4;
+			background-position: center;
+			background-image: url('/dist/img/desert.webp');
+
+			&::after {
+				background-color: rgba(0, 0, 0, 0.35);
+			}
 		}
 	}
 
 	&__card-title {
 		margin: 1.5em 0;
+		font-size: 2.6rem;
 	}
 
 	&__card-text {
 		margin-bottom: 1em;
+		font-size: 1.8rem;
+
+		&--one {
+			color: c.$gray;
+		}
+
+		&--two {
+			margin-left: 0.5em;
+			color: #c5c4c6;
+		}
 	}
 
-	&__card-link {
-		display: block;
-		margin-top: 1.5em;
-		padding: 0.5em 1em;
-		width: 180px;
-		text-align: center;
-		border-radius: 5px;
+	&__btn {
+		position: absolute;
+		bottom: 1em;
+		left: 1em;
+		padding: 1em 2em;
+		font-size: 1.6rem;
 		color: c.$text-color-two;
-		background-color: c.$primary;
-	}
-
-	&__bottom {
-		position: relative;
-		display: flex;
-		align-items: flex-start;
-		flex-direction: column;
-		gap: 0.5em;
-		margin-top: 1.5em;
-	}
-
-	input,
-	&__send {
-		border: none;
 		border-radius: 5px;
+		z-index: 5;
+
+		&--one {
+			background-color: c.$secondary;
+		}
+
+		&--two {
+			border: transparent;
+			background-color: c.$primary;
+		}
 	}
 
 	input {
-		padding: 0.5em 1em;
-	}
+		margin-bottom: 1em;
+		padding: 0.8em 1em;
+		color: lightgrey;
+		background: rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+		border: 1.25px solid rgba(0, 0, 0, 0.5);
 
-	&__send {
-		padding: 1em 2em;
-		margin-top: 1em;
-		font-size: 1.6rem;
-		color: c.$text-color-two;
-		background-color: c.$secondary;
+		&::placeholder {
+			font-family: 'Inter', sans-serif;
+			font-size: 1.6rem;
+		}
 	}
 }
 
@@ -640,9 +658,23 @@ body {
 			gap: 2.5em;
 		}
 
-		&__card-link {
-			width: 220px;
-			font-size: 1.8rem;
+		&__btn {
+			bottom: 2em;
+			left: 1em;
+
+			&--one,
+			&--two {
+				transition: color 0.3s, background-color 0.3s;
+
+				&:hover {
+					color: c.$text-color;
+					background-color: c.$bg-color;
+				}
+			}
+
+			&--two {
+				cursor: pointer;
+			}
 		}
 	}
 
@@ -768,24 +800,24 @@ body {
 			font-size: 1.8rem;
 		}
 
-		&__card-link {
-			transition: color 0.3s, background-color 0.3s;
+		// &__card-link {
+		// 	transition: color 0.3s, background-color 0.3s;
 
-			&:hover {
-				color: c.$text-color;
-				background-color: c.$bg-color;
-			}
-		}
+		// 	&:hover {
+		// 		color: c.$text-color;
+		// 		background-color: c.$bg-color;
+		// 	}
+		// }
 
-		&__send {
-			font-size: 1.8rem;
-			transition: background-color 0.3s;
-			cursor: pointer;
+		// &__send {
+		// 	font-size: 1.8rem;
+		// 	transition: background-color 0.3s;
+		// 	cursor: pointer;
 
-			&:hover {
-				background-color: c.$primary;
-			}
-		}
+		// 	&:hover {
+		// 		background-color: c.$primary;
+		// 	}
+		// }
 
 		input {
 			padding: 1em 2em;

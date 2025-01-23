@@ -9,6 +9,9 @@ const menuLink = document.querySelectorAll('.nav__menu-link')
 const barsLine = document.querySelectorAll('.nav__bars-line')
 const tripsCards = document.querySelectorAll('.trips__card')
 
+const newsletterButton = document.querySelector('.newsletter__btn--two')
+const newsletterInput = document.querySelector('input')
+
 const infoValueDisplays = document.querySelectorAll('.info__card-number')
 let infoInterval = 5000
 
@@ -44,16 +47,19 @@ const handleNav = () => {
 		menuLink.forEach(link => (link.style.color = '#fffdf7'))
 	}
 
-	if (window.matchMedia("(max-width: 576px)").matches && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		window.addEventListener('scroll', function() {
+	if (
+		window.matchMedia('(max-width: 576px)').matches &&
+		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+	) {
+		window.addEventListener('scroll', function () {
 			if (window.scrollY > 50) {
-				menu.style.backgroundColor = '#fffdf7';
-				menuLink.forEach(link => (link.style.color = '#323031'));
+				menu.style.backgroundColor = '#fffdf7'
+				menuLink.forEach(link => (link.style.color = '#323031'))
 			} else {
-				menu.style.backgroundColor = '#242323';
-				menuLink.forEach(link => (link.style.color = '#fffdf7'));
+				menu.style.backgroundColor = '#242323'
+				menuLink.forEach(link => (link.style.color = '#fffdf7'))
 			}
-		});
+		})
 	}
 }
 
@@ -122,9 +128,28 @@ const logoClose = () => {
 	body.classList.add('unlocked')
 }
 
+const handleNewsletter = () => {
+	if (!(newsletterInput.value == '')) {
+		newsletterInput.value = ''
+		newsletterButton.textContent = 'Wysłano!'
+		newsletterButton.style.backgroundColor = '#fffdf7'
+		newsletterButton.style.color = '#242323'
+
+		setTimeout(() => {
+			newsletterButton.style.backgroundColor = '#04724d'
+			newsletterButton.style.color = '#fffdf7'
+		}, 5000)
+
+		setTimeout(() => {
+			newsletterButton.textContent = 'Zapisz się'
+		}, 4900)
+	}
+}
+
 handleYear()
 bars.addEventListener('click', () => {
 	showMenu(), lockedMenu()
 })
 logo.addEventListener('click', logoClose)
 document.addEventListener('scroll', handleNav)
+newsletterButton.addEventListener('click', handleNewsletter)

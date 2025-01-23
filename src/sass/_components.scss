@@ -23,6 +23,14 @@ a {
 	background-color: c.$bg-color-two;
 }
 
+.color-primary {
+	color: c.$primary;
+}
+
+.color-secondary {
+	color: c.$secondary;
+}
+
 .section__header {
 	padding: 0 1em 2em 1em;
 	text-align: center;
